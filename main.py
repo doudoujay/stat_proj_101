@@ -5,9 +5,10 @@ import matplotlib.pyplot as plt
 from numpy import *
 from regression import *
 import pylab as lab
-import matplotlib.mlab as mlab
 import math
 import scipy.stats as stats
+import statsmodels.api as sm
+
 
 N = 100000
 x = []
@@ -27,6 +28,8 @@ y_sort = sorted(y)
 (m, b) = lab.polyfit(x, y, 1)
 
 yp = polyval([m, b], x)
+print m
+print b
 
 # draw graph
 
@@ -41,7 +44,6 @@ plt.plot(x,yp)
 plt.scatter(x,y)
 
 # hist and normal
-
 ax2 = fig.add_subplot(222)
 
 
@@ -55,6 +57,7 @@ ax2.set_title("Normal distrubution")
 ax3 = fig.add_subplot(223)
 ax3.set_title("normal")
 hmean = mean(y_sort)
+
 hstd = std(y_sort)
 pdf = stats.norm.pdf(y_sort, hmean, hstd)
 plt.plot(y_sort, pdf)
@@ -63,6 +66,7 @@ print(hmean, hstd)
 
 ax4 = fig.add_subplot(224)
 ax4.set_title('residual plot')
+
 #Residual plot
 difference = yp-y
 plt.scatter(x,difference)
@@ -71,3 +75,8 @@ plt.grid()
 
 
 plt.show()
+# TODO: T stat => P value
+
+model = sm.OLS(y, x)
+results = model.fit()
+print(results.summary())

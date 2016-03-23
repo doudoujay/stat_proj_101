@@ -1,6 +1,6 @@
 # AP Statistics: End of the project
 
->Jay Ma
+>Jay Ma, Nick Lin
 
 ### 1. Question:
 ***
@@ -21,13 +21,15 @@ Format .CSV
 
 Check Conditions:
 
-* We’ll use our LINER acronym:
+We’ll use our LINER acronym:
+
 * Linear:
 * Independent:
 * Normal:
 * Equal SD:
 * Random:
 
+Use Ordinary least squares (OLS).
 
 1.Import Data into Python Dict Data
 
@@ -36,5 +38,25 @@ Check Conditions:
 3.Plot the data
 
 4.Linear Regression y = mx + b
+
+```
+m = 0.455789547667
+b = 0.250230589531
+Mean = 1011.9100495286787
+Std = 570.70164409207905
+```
+
+The OLS Result:
+
+![](http://i4.tietuku.cn/379469de85c2e3fd.png)
+
+Graphs:
+
+![](http://i4.tietuku.cn/8e9669f55186e27d.png)
+
+
+
+
+
 
 ### 4. Conclusion
