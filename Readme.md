@@ -19,9 +19,22 @@ Format .CSV
 
 ### 3.Data Analysis
 
-Python 
+Check Conditions:
 
-Import Data into Python Dict Data
+* We’ll use our LINER acronym:
+* Linear:
+* Independent:
+* Normal:
+* Equal SD:
+* Random:
 
+
+1.Import Data into Python Dict Data
+
+2.Formulate the quality value according to the specific value
+
+3.Plot the data
+
+4.Linear Regression y = mx + b
 
 ### 4. Conclusion
